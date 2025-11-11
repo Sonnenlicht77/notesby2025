@@ -49,10 +49,10 @@
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  --vp-c-brand-1: #ee9ca7;
+  --vp-c-brand-2: #ea8694;
+  --vp-c-brand-3: #e77080;
+  --vp-c-brand-soft: rgba(238, 156, 167, 0.1);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
@@ -93,15 +93,15 @@
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
+    45deg,
+    #ee9ca7 30%,
+    #ffdde1
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #bd34fe 50%,
-    #47caff 50%
+    #ee9ca7  50%,
+    #ffdde1 50%
   );
   --vp-home-hero-image-filter: blur(44px);
 }
@@ -137,3 +137,31 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+
+
+.VPNavBar .VPNavBarTitle a.title span{
+  color: var(--vp-c-brand-1);
+  text-shadow: 1px 1px 0 var(--vp-c-brand-1);
+}
+
+/* 标签链接样式 */
+/* 标签链接样式 - 同时支持HTML和Markdown格式 */
+.tag-link,
+:is(.VPDoc p, .VPDoc li) a[href^="/tags/"] {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px;
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.3em;
+  transition: all 0.2s ease;
+}
+
+.tag-link:hover,
+:is(.VPDoc p, .VPDoc li) a[href^="/tags/"]:hover {
+  background-color: var(--vp-c-brand-3);
+  color: var(--vp-c-white);
+  transform: translateY(-1px);
+}

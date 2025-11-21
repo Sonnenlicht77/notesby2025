@@ -48,7 +48,13 @@ export default defineConfig({
           {
             text: '前端基础',
             items: [
-              { text: 'JavaScript', link: 'jsts/js/' },
+              { 
+                text: 'JavaScript', 
+                link: 'jsts/js/',
+                items: [
+                  { text: 'Promise', link: 'jsts/js/promise/' },
+                ]
+              },
               { text: 'TypeScript', link: 'jsts/ts/' }
             ]
           },
@@ -106,6 +112,13 @@ export default defineConfig({
         link: 'index',
         base: '/categories/projects/',
         items: [
+          {
+            text: '练手DEMO',
+            link: 'demos/',
+            items: [
+              { text: '静态仿王者荣耀网站', link: 'demos/pvp/' },
+            ]
+          },
           {
             text: '前端项目',
             items: [

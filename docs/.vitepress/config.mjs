@@ -1,7 +1,13 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // Mermaid 配置
+  
+    // 禁用默认主题
+  
+
   title: "🚀 Notes by 2025",
   description: "个人技术博客 - 记录学习、分享技术、思考生活",
   base: '/notesby2025/',
@@ -27,7 +33,7 @@ export default defineConfig({
             { text: '前端开发', link: '/categories/frontend/' },
             { text: '后端技术', link: '/categories/backend/' },
             { text: '工 程 化', link: '/categories/engineering/' },
-            { text: '样   式', link: '/categories/style/' },
+            { text: 'CSS/HTML', link: '/categories/style/' },
             { text: '项目实战', link: '/categories/projects/' },
             { text: '技术文章', link: '/categories/technology/' },
             { text: 'err报错', link: '/categories/errors/' }
@@ -166,7 +172,14 @@ export default defineConfig({
           {
             text: '样式分类',
             items: [
-              { text: 'CSS', link: 'css/' },
+              { text: 'CSS', link: 'css/' ,
+                items: [
+                  { text: '基础样式', link: 'css/base' },
+                  { text: '页面布局与排版', link: 'css/layout' },
+                  { text: '定位与浮动', link: 'css/position' },
+                  { text: '场景', link: 'css/use' }
+                ]
+              },
               { text: 'SCSS', link: 'scss/' },
               { text: 'Tailwind CSS', link: 'tailwind/' }
             ]
@@ -229,7 +242,8 @@ export default defineConfig({
     lineNumbers: true,
     config: (md) => {
       // 可以在这里添加 markdown-it 插件
-    }
+    },
+    mermaid: true
   },
 
   // 外观

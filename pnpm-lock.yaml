@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      mermaid:
-        specifier: ^11.12.1
-        version: 11.12.1
       vitepress:
         specifier: 2.0.0-alpha.12
         version: 2.0.0-alpha.12(postcss@8.5.6)

@@ -248,7 +248,10 @@ export default defineConfig({
     config: (md) => {
       // 可以在这里添加 markdown-it 插件
     },
-    mermaid: true
+    mermaid: true,
+    image:{
+      lazyLoad: true
+    }
   },
 
   // 外观

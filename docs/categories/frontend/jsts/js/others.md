@@ -26,15 +26,40 @@ let a = 10;
 
 举例：
 ```js
-var a = 10; // 全局作用域
-function foo() {
-  var b = 20; // 函数作用域
-  if (true) {
-    var c = 30; // 块级作用域
-  }
+var x = 1  // 全局作用域
+function fn() {
+    x = 10 // 全局作用域的x被赋值为10
+    return 
+    function x(){}
 }
-console.log(a); // 10
-console.log(b); // ReferenceError: b is not defined
-console.log(c); // 30
+fn() // 调用fn函数，全局作用域的x被赋值为10
+console.log(x) // 1
 ```
+
+- 分析：
+
+1. 变量提升：
+- 全局作用域的变量提升：
+在JavaScript引擎执行代码之前，会进行**变量提升**（Hoisting）处理：
+
+- `var x` 声明会被提升到全局作用域顶部，初始值为 `undefined`
+- `function fn()` 整个函数声明会被提升到全局作用域顶部
+提升后的代码结构相当于：
+```javascript
+// 变量和函数提升到这里
+var x;
+function fn() {
+    // 函数内部的提升会在函数执行时处理
+    x = 10;
+    return;
+    function x(){};
+}
+
+// 实际执行的赋值和调用
+x = 1;
+fn();
+console.log(x); // 1
+```
+
+
 

@@ -8,9 +8,10 @@ export default defineConfig({
     // 禁用默认主题
   
 
-  title: "🚀 Notes by 2025",
+  title: "Notes by 2025",
   description: "个人技术博客 - 记录学习、分享技术、思考生活",
   base: '/notesby2025/',
+  
 
   // SEO 配置
   head: [
@@ -19,7 +20,7 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Notes by 2025' }],
     ['meta', { property: 'og:locale', content: 'zh-CN' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: 'favicon.ico' }]
   ],
 
   // 主题配置
@@ -58,7 +59,9 @@ export default defineConfig({
                 text: 'JavaScript', 
                 link: 'jsts/js/',
                 items: [
+                  { text: '浏览器', link: 'jsts/js/broswer/' },
                   { text: 'Promise', link: 'jsts/js/promise/' },
+                  { text:'其他', link:'jsts/js/others/' }
                 ]
               },
               { text: 'TypeScript', link: 'jsts/ts/' }
@@ -234,7 +237,9 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/your-username/notesby2025/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页面'
-    }
+    },
+    logo: '/logo.svg',
+
   },
 
   // Markdown 配置

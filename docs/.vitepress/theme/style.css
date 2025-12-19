@@ -165,3 +165,9 @@
   color: var(--vp-c-white);
   transform: translateY(-1px);
 }
+
+
+.vp-doc li p strong{
+  color: #e77080;
+}
+
